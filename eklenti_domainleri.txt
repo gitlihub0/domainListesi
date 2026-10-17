@@ -16,7 +16,7 @@
 |SezonlukDizi:https://sezonlukdizi.cc
 |Jetfilmizle:https://jetfilmizle.now
 |DiziBox:https://www.dizibox.live
-|Anizium:https://api.anizium.co
+|Anizium:https://anizium.co
 |Sinefy:https://sinefy3.com
 |Dizist:https://dizist.live
 |DiziYo:https://diziyo.sh
