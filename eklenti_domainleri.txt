@@ -67,7 +67,7 @@
 |TvDiziler:https://tvdiziler.tv
 |BelgeselX:https://belgeselx.com
 |YTS:https://web.yts.gg
-|VegaMovies:https://1vegamovies.baby
+|VegaMovies:https://1vegamovies.pics
 |MoviesMod:https://moviesmod.kids
 |4kHdHub:https://4khdhub.one
 |HDHUB4u:https://new8.hdhub4u.cl
