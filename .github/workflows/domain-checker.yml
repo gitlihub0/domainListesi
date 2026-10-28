@@ -1,0 +1,73 @@
+name: Domain Kontrol ve Güncelleme
+
+on:
+  schedule:
+    # 45 dakika arayla (saat başındaki GitHub yoğunluğundan kaçınmak için :07 ve :52)
+    - cron: '7,52 * * * *'
+  workflow_dispatch:
+
+env:
+  FILE_PATH: eklenti_domainleri.txt
+  BLACKLIST_PATH: domain_blacklist.txt
+  TZ: Europe/Istanbul
+
+# Push yetkisi için gerekli (depo ayarı "read-only" olsa bile çalışır)
+permissions:
+  contents: write
+
+# Aynı anda iki çalışma çakışmasın
+concurrency:
+  group: domain-kontrol
+  cancel-in-progress: false
+
+jobs:
+  domain-kontrolu:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Depoyu klonla
+        uses: actions/checkout@v4
+
+      - name: Python kurulumu
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: 'pip'
+          cache-dependency-path: requirements.txt
+
+      - name: Gerekli paketleri yükle
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Domainleri kontrol et ve güncelle
+        run: python scripts/domain_guncelle.py
+
+      - name: Değişiklikleri kaydet
+        run: |
+          git config user.name 'Domain Kontrol Botu'
+          git config user.email 'bot@github-actions'
+
+          git add "${{ env.FILE_PATH }}"
+
+          if git diff --staged --quiet; then
+            echo "Değişiklik yok, commit atlanıyor"
+            exit 0
+          fi
+
+          CURRENT_TIME=$(date +'%Y-%m-%d %H:%M')
+          git commit -m "🔄 Domain güncellemesi - $CURRENT_TIME"
+
+          # Push sırasında uzak depo değişmişse rebase edip tekrar dene
+          for i in 1 2 3; do
+            if git pull --rebase --autostash origin "${GITHUB_REF_NAME}" && git push origin "HEAD:${GITHUB_REF_NAME}"; then
+              echo "Push başarılı"
+              exit 0
+            fi
+            echo "Push başarısız (deneme $i), tekrar deneniyor..."
+            sleep $((i * 5))
+          done
+
+          echo "::error::Push 3 denemede de başarısız oldu"
+          exit 1
