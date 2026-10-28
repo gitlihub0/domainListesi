@@ -3,7 +3,7 @@ name: Domain Kontrol ve Güncelleme
 on:
   schedule:
     # 45 dakika arayla (saat başındaki GitHub yoğunluğundan kaçınmak için :07 ve :52)
-    - cron: '7,52 * * * *'
+    - cron: '17 */6 * * *'
   workflow_dispatch:
 
 env:
