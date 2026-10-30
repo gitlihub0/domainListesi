@@ -30,7 +30,7 @@
 |RoketDizi:https://flatscher.net
 |DiziMom:https://www.dizidad.com
 |DiziMag:https://dizimag.nl
-|TrAnimeIzle:https://www.tranimeizle.io
+|TrAnimeIzle:https://www.tranimeizle.live
 |Animeizlesene:https://www.animeizlesene.com
 |Animeler:https://animeler.pw
 |AsyaWatch:https://asyawatch.com
