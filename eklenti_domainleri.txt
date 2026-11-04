@@ -4,7 +4,7 @@
 |Dizilla:https://dizilla.to
 |DiziGom:https://www.alliance4creativity.com
 |FilmModu:https://www.filmmodu.one
-|DiziPalOrijinal:https://dizipal1593.com
+|DiziPalOrijinal:https://dizipal1594.com
 |HDFilmCehennemi:https://www.hdfilmcehennemi.nl
 |Anizm:https://anizm.net
 |Animecix:https://animecix.tv
@@ -70,7 +70,7 @@
 |VegaMovies:https://1vegamovies.shop
 |MoviesMod:https://moviesmod.kids
 |4kHdHub:https://4khdhub.one
-|HDHUB4u:https://new10.hdhub4u.cl
+|HDHUB4u:https://new11.hdhub4u.cl
 |FlixHQ:https://flixhq.to
 |SeiCode:https://seicode.net
 |SelcukFlix:https://selcukflix.co
