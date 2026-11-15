@@ -1,7 +1,7 @@
 |Turkanime:https://www.turkanime.tv
 |FullHDFilmizlesene:https://www.fullhdfilmizlesene.now
 |FilmMakinesi:https://filmmakinesi.to
-|Dizilla:https://dizilla.to
+|Dizilla:https://dizilla.la
 |DiziGom:https://www.alliance4creativity.com
 |FilmModu:https://www.filmmodu.one
 |DiziPalOrijinal:https://dizipal1595.com
@@ -10,7 +10,7 @@
 |Animecix:https://animecix.tv
 |KoreanTurk:https://www.koreanturk.net
 |Asyafanatiklerim:https://asyafanatiklerim.com
-|DiziWatch:https://diziwatch.to
+|DiziWatch:https://diziwatch.app
 |YabanciDizi:https://yabancidizi.news
 |WebteIzle:https://webteizle.info
 |SezonlukDizi:https://sezonlukdizi.cc
